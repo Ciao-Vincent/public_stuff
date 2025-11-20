@@ -82,8 +82,7 @@
             "type": "mixed",
             "tag": "mixed-in",
             "listen": "127.0.0.1",
-            "listen_port": 7890,
-            "set_system_proxy": true
+            "listen_port": 7890
         }
     ],
     "outbounds": [
@@ -474,13 +473,6 @@
                 "download_detour": "DEFAULT"
             },
             {
-                "tag": "telegram_asn",
-                "type": "remote",
-                "url": "https://raw.githubusercontent.com/yyhhyyyyyy/sing-box-ruleset/main/ip/telegram_asn.srs",
-                "format": "binary",
-                "download_detour": "DEFAULT"
-            },
-            {
                 "tag": "telegram_ip",
                 "type": "remote",
                 "url": "https://raw.githubusercontent.com/yyhhyyyyyy/sing-box-ruleset/main/ip/telegram.srs",
@@ -680,10 +672,11 @@
                         ]
                     },
                     {
+                        "type": "logical",
                         "mode": "and",
                         "rules": [
                             {
-                                "protocol": "udp"
+                                "network": "udp"
                             },
                             {
                                 "domain_suffix": "googlevideo.com"
@@ -712,523 +705,523 @@
             {
                 "tag": "geoip_hk",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-hk.srs"
             },
             {
                 "tag": "geoip_mo",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-mo.srs"
             },
             {
                 "tag": "geoip_tw",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-tw.srs"
             },
             {
                 "tag": "geoip_kr",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-kr.srs"
             },
             {
                 "tag": "geoip_my",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-my.srs"
             },
             {
                 "tag": "geoip_th",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-th.srs"
             },
             {
                 "tag": "geoip_ph",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-ph.srs"
             },
             {
                 "tag": "geoip_vn",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-vn.srs"
             },
             {
                 "tag": "geoip_id",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-id.srs"
             },
             {
                 "tag": "geoip_in",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-in.srs"
             },
             {
                 "tag": "geoip_pk",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-pk.srs"
             },
             {
                 "tag": "geoip_bd",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-bd.srs"
             },
             {
                 "tag": "geoip_np",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-np.srs"
             },
             {
                 "tag": "geoip_lk",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-lk.srs"
             },
             {
                 "tag": "geoip_mm",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-mm.srs"
             },
             {
                 "tag": "geoip_kh",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-kh.srs"
             },
             {
                 "tag": "geoip_la",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-la.srs"
             },
             {
                 "tag": "geoip_mn",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-mn.srs"
             },
             {
                 "tag": "geoip_kz",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-kz.srs"
             },
             {
                 "tag": "geoip_uz",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-uz.srs"
             },
             {
                 "tag": "geoip_kg",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-kg.srs"
             },
             {
                 "tag": "geoip_ae",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-ae.srs"
             },
             {
                 "tag": "geoip_sa",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-sa.srs"
             },
             {
                 "tag": "geoip_qa",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-qa.srs"
             },
             {
                 "tag": "geoip_kw",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-kw.srs"
             },
             {
                 "tag": "geoip_bh",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-bh.srs"
             },
             {
                 "tag": "geoip_om",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-om.srs"
             },
             {
                 "tag": "geoip_ir",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-ir.srs"
             },
             {
                 "tag": "geoip_iq",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-iq.srs"
             },
             {
                 "tag": "geoip_il",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-il.srs"
             },
             {
                 "tag": "geoip_jo",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-jo.srs"
             },
             {
                 "tag": "geoip_tr",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-tr.srs"
             },
             {
                 "tag": "geoip_us",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-us.srs"
             },
             {
                 "tag": "geoip_ca",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-ca.srs"
             },
             {
                 "tag": "geoip_mx",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-mx.srs"
             },
             {
                 "tag": "geoip_br",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-br.srs"
             },
             {
                 "tag": "geoip_ar",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-ar.srs"
             },
             {
                 "tag": "geoip_cl",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-cl.srs"
             },
             {
                 "tag": "geoip_co",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-co.srs"
             },
             {
                 "tag": "geoip_pe",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-pe.srs"
             },
             {
                 "tag": "geoip_ve",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-ve.srs"
             },
             {
                 "tag": "geoip_uy",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-uy.srs"
             },
             {
                 "tag": "geoip_py",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-py.srs"
             },
             {
                 "tag": "geoip_bo",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-bo.srs"
             },
             {
                 "tag": "geoip_ec",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-ec.srs"
             },
             {
                 "tag": "geoip_cr",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-cr.srs"
             },
             {
                 "tag": "geoip_pa",
                 "type": "remote",
-                "format": "geoip",
-                "url": "https://raw.githubusercontentusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-pa.srs"
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-pa.srs"
             },
             {
                 "tag": "geoip_do",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-do.srs"
             },
             {
                 "tag": "geoip_gt",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-gt.srs"
             },
             {
                 "tag": "geoip_hn",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-hn.srs"
             },
             {
                 "tag": "geoip_sv",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-sv.srs"
             },
             {
                 "tag": "geoip_ni",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-ni.srs"
             },
             {
                 "tag": "geoip_jm",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-jm.srs"
             },
             {
                 "tag": "geoip_bs",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-bs.srs"
             },
             {
                 "tag": "geoip_tt",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-tt.srs"
             },
             {
                 "tag": "geoip_pr",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-pr.srs"
             },
             {
                 "tag": "geoip_gb",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-gb.srs"
             },
             {
                 "tag": "geoip_fr",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-fr.srs"
             },
             {
                 "tag": "geoip_de",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-de.srs"
             },
             {
                 "tag": "geoip_nl",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-nl.srs"
             },
             {
                 "tag": "geoip_be",
                 "type": "remote",
-                "format": "geoip",
-                "url": "https://raw.githubusercontentusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-be.srs"
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-be.srs"
             },
             {
                 "tag": "geoip_lu",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-lu.srs"
             },
             {
                 "tag": "geoip_ch",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-ch.srs"
             },
             {
                 "tag": "geoip_at",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-at.srs"
             },
             {
                 "tag": "geoip_pl",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-pl.srs"
             },
             {
                 "tag": "geoip_cz",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-cz.srs"
             },
             {
                 "tag": "geoip_sk",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-sk.srs"
             },
             {
                 "tag": "geoip_hu",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-hu.srs"
             },
             {
                 "tag": "geoip_ro",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-ro.srs"
             },
             {
                 "tag": "geoip_bg",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-bg.srs"
             },
             {
                 "tag": "geoip_it",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-it.srs"
             },
             {
                 "tag": "geoip_es",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-es.srs"
             },
             {
                 "tag": "geoip_pt",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-pt.srs"
             },
             {
                 "tag": "geoip_ie",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-ie.srs"
             },
             {
                 "tag": "geoip_no",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-no.srs"
             },
             {
                 "tag": "geoip_se",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-se.srs"
             },
             {
                 "tag": "geoip_fi",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-fi.srs"
             },
             {
                 "tag": "geoip_dk",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-dk.srs"
             },
             {
                 "tag": "geoip_is",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-is.srs"
             },
             {
                 "tag": "geoip_ee",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-ee.srs"
             },
             {
                 "tag": "geoip_lv",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-lv.srs"
             },
             {
                 "tag": "geoip_lt",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-lt.srs"
             },
             {
                 "tag": "geoip_gr",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-gr.srs"
             },
             {
                 "tag": "geoip_hr",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-hr.srs"
             },
             {
                 "tag": "geoip_si",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-si.srs"
             },
             {
                 "tag": "geoip_rs",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-rs.srs"
             },
             {
                 "tag": "geoip_ua",
                 "type": "remote",
-                "format": "geoip",
+                "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/refs/heads/rule-set/geoip-ua.srs"
             }
         ],
@@ -1328,34 +1321,17 @@
                 "ip_cidr": [
                     "91.108.16.0/21",
                     "91.108.56.0/23",
-                    "149.154.168.0/22"
-                ],
-                "ip6_cidr": [
+                    "149.154.168.0/22",
                     "2001:B28:F23C::/48",
                     "2001:B28:F23F::/48"
-                ]
-            },
-            {
-                "outbound": "SG",
-                "ip_asn": [
-                    44907,
-                    62014
                 ]
             },
             {
                 "outbound": "US",
                 "ip_cidr": [
                     "91.108.12.0/22",
-                    "149.154.172.0/22"
-                ],
-                "ip6_cidr": [
+                    "149.154.172.0/22",
                     "2001:B28:F23D::/48"
-                ]
-            },
-            {
-                "outbound": "US",
-                "ip_asn": [
-                    59930
                 ]
             },
             {
@@ -1369,25 +1345,15 @@
                     "95.161.64.0/20",
                     "109.239.140.0/24",
                     "149.154.160.0/21",
-                    "185.76.151.0/24"
-                ],
-                "ip6_cidr": [
+                    "185.76.151.0/24",
                     "2001:67C:4E8::/48",
                     "2A0A:F280:203::/48"
-                ]
-            },
-            {
-                "outbound": "NL",
-                "ip_asn": [
-                    62041,
-                    211157
                 ]
             },
             {
                 "action": "route",
                 "rule_set": [
                     "telegram",
-                    "telegram_asn",
                     "telegram_ip"
                 ],
                 "outbound": "telegram"
@@ -1856,7 +1822,7 @@
             "external_ui": "ui",
             "external_ui_download_url": "https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip",
             "external_ui_download_detour": "DEFAULT",
-            "default_mode": "whitelist"
+            "default_mode": "rule"
         },
         "cache_file": {
             "enabled": true,
